@@ -8,9 +8,39 @@
 
 			num1 = document.getElementById("txtnum1").value;
 			num2 =document.getElementById("txtnum2").value;
-			alert(eval(num1)+eval(num2));
+			document.getElementById("res").innerHTML=eval(num1)+eval(num2);
+			//alert(eval(num1)+eval(num2));
+			//document.write(eval(num1)+eval(num2));
 		}
-		
+		function fun1()
+		{
+
+			num1 = document.getElementById("txtnum1").value;
+			num2 =document.getElementById("txtnum2").value;
+			alert(eval(num1)-eval(num2));
+		}
+		function fun2()
+		{
+
+			num1 = document.getElementById("txtnum1").value;
+			num2 =document.getElementById("txtnum2").value;
+			alert(eval(num1)*eval(num2));
+		}
+		function fun3()
+		{
+
+			num1 = document.getElementById("txtnum1").value;
+			num2 =document.getElementById("txtnum2").value;
+			alert(eval(num1)/eval(num2));
+		}
+		function changecolor(id)
+		{
+         document.getElementById(id).style.backgroundColor='red';
+		}
+		function removecolor(id)
+		{
+          document.getElementById(id).style.backgroundColor='';
+		}
 	</script>
 </head>
 <body>
@@ -19,7 +49,11 @@
 <br><br>
 <input type="text" id="txtnum2" />
 <br><br>
-<input type="submit" name="btnsubmit" onclick="fun()" />
-
+<input type="submit" name="btnsubmit" id="btncolor" value="+" onclick="fun()" onmouseover="changecolor(this.id)" onmouseout="removecolor(this.id)" />
+<input type="submit" name="btnsubmit" id="btncolor1" value="-" onclick="fun1()" onmouseover="changecolor(this.id)" onmouseout="removecolor(this.id)" />
+<input type="submit" name="btnsubmit" id="btncolor2" value="*" onclick="fun2()" onmouseover="changecolor(this.id)" onmouseout="removecolor(this.id)" />
+<input type="submit" name="btnsubmit"  id="btncolor3" value="/" onclick="fun3()" onmouseover="changecolor(this.id)" onmouseout="removecolor(this.id)"  />
+<br>
+<div id="res"></div>
 </body>
 </html>
