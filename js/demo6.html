@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function calc()
+		{
+
+         basic = document.getElementById("txtbasic").value;
+         ta = document.getElementById("txtta").value;
+         da = document.getElementById("txtda").value;
+         comm = document.getElementById("txtcomm").value;
+         pf = document.getElementById("txtpf").value;
+         leave = document.getElementById("txtl").value;
+         tsal = eval(basic)+eval(ta)+eval(da)+eval(comm);
+         gsal= tsal-pf-((tsal/30)*leave);
+         document.getElementById("res").innerHTML=gsal;
+     //    document.write("Gross Salary Is",gsal);
+
+		}
+
+	</script>
+</head>
+<body>
+<input type="text" id="txtbasic" placeholder="Enter basic" />
+<br><br>
+<input type="text" id="txtta" placeholder="Enter ta" />
+<br><br>
+<input type="text" id="txtda" placeholder="Enter da" />
+<br><br>
+<input type="text" id="txtcomm" placeholder="Enter comm" />
+<br><br>
+<input type="text" id="txtpf" placeholder="Enter pf" />
+<br><br>
+<input type="text" id="txtl" placeholder="Enter leave" />
+<br><br>
+<input type="button" id="btnclick" value="Calculate" onclick="calc()" />
+<br><br>
+<div id="res"></div>
+</body>
+</html>
